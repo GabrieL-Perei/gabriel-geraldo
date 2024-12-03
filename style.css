@@ -1,0 +1,130 @@
+:root {
+    --primary-color: #007BFF; 
+    --primary-hover: #0056b3; 
+    --secondary-color: #ffffff; 
+    --border-color: #000000; 
+    --background-color: #f4f4f9; 
+    --text-color: #333; 
+
+    --font-family: 'Arial', sans-serif; 
+    --font-size-base: 16px; 
+    --font-size-large: 1.2rem; 
+    --font-weight-bold: bold; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+section {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section form label {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 5px;
+}
+
+section form input,
+section form select {
+    padding: var(--padding-base);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: var(--font-size-base);
+    height: 25px;
+}
+
+section form input[type="submit"] {
+    width: 200px;
+    height: 30px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+section form input[type="submit"]:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+#vinho-section {
+    background-color: #f8e6e0; 
+    border: 2px solid #d9534f;
+    border-radius: 10px;
+}
+
+#suco-section {
+    background-color: #e6f8e3; 
+    border: 2px solid #5cb85c;
+    border-radius: 10px;
+}
+
+#refrigerante-section {
+    background-color: #e3e6f8; 
+    border: 2px solid #5bc0de;
+    border-radius: 10px;
+}
+
+#tipo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Adiciona melhor responsividade */
+    padding: 30px; /* Aumentei o padding para um layout mais espaçoso */
+    background-color: var(--background-color, #f9f9f9); 
+    border: 2px solid var(--border-color, #ccc); 
+    border-radius: var(--border-radius, 12px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombras mais suaves e realistas */
+    margin: 30px auto; /* Centraliza a seção */
+    gap: 1.5rem; /* Refinado o espaço entre elementos */
+    max-width: 1200px; /* Limita a largura para layouts maiores */
+}
+
+#tipo-section a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color, #333); /* Cor mais neutra para contraste */
+    font-size: var(--font-size-large, 1.2rem);
+    font-weight: var(--font-weight-bold, 600);
+    padding: 12px 24px; /* Refinado para proporções melhores */
+    min-width: 160px; /* Largura mínima para melhorar o layout */
+    border: 2px solid var(--border-color, #ccc);
+    border-radius: 8px; /* Bordas mais arredondadas para um visual moderno */
+    background-color: var(--secondary-color, #fff); 
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease-in-out; /* Transição para todas as propriedades */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombras para destaque */
+}
+
+#tipo-section a:hover {
+    color: var(--secondary-color, #fff); 
+    background-color: var(--primary-hover, #007bff); 
+    transform: translateY(-5px) scale(1.05); /* Efeito de flutuação e zoom */
+    border-color: var(--primary-hover, #007bff); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta o efeito de destaque */
+}
+
+#tipo-section a + a {
+    margin-left: 0; /* Mantém o layout consistente */
+}
+
